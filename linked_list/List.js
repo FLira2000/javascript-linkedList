@@ -1,18 +1,29 @@
 import Node_l from "./Node_l.js";
 
 export default class List {
-    constructor(head) {
+    constructor(arr) {
         this.toArray.bind();
         this.append.bind();
-        if(typeof(head) == typeof(Node_l))
-            this.head = head;
-        else
-            this.head = new Node_l(head);
+        this.head = null;
+
+        if(arr === undefined) return;
+
+        try {
+            arr.forEach(e => this.append(e));
+        } catch (e) {
+            throw new Error("Initializer object must be and Array");
+        }
     }
 
     append(item){
-        let aux;
-        for(aux = this.head; aux.next != null; aux = aux.next);
+        let aux = this.head;
+
+        if(aux == null){
+            this.head = new Node_l(item);
+            return; 
+        }
+
+        for(aux; aux.next != null; aux = aux.next);
         aux.next = new Node_l(item);
     }
 
