@@ -1,7 +1,7 @@
-let head = new Node(1);
+let head = new Node_l(1);
 
-head.setNext(new Node(2));
-head.next.setNext(new Node(3));
+head.setNext(new Node_l(2));
+head.next.setNext(new Node_l(3));
 console.log(head);
 
 let list = new List(head);
