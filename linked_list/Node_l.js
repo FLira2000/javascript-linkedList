@@ -6,7 +6,8 @@ export default class Node_l {
     }
 
     setNext(newNode) {
-        if (newNode == null) return;
+        if (newNode == null)
+            return;
         this.next = newNode;
     }
 }
