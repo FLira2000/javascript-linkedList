@@ -1,4 +1,4 @@
-class Node_l {
+export default class Node_l {
     constructor(valor) {
         this.value = valor;
         this.next = null;
