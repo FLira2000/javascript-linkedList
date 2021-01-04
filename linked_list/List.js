@@ -13,6 +13,21 @@ export default class List {
         } catch (e) {
             throw new Error("Initializer object must be and Array");
         }
+
+        this.count;
+    }
+
+    _count(){
+        let aux;
+        let i = 0;
+        for(aux = this.head; aux != null; aux = aux.next)
+            i++;
+        
+        return i;
+    }
+
+    get count(){
+        return this._count();
     }
 
     append(item){

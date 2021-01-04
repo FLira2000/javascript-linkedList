@@ -5,3 +5,8 @@ let list = new List(['bury', 'the', 'light']);
 let list2 = new List();
 
 console.log(list);
+console.log(list.count);
+
+list.append('deep');
+
+console.log(list.count);
